@@ -2,21 +2,22 @@ public class Main {
     public static void main(String[] args) {
 
         //Ex1 и Ex2
-        boolean clientOS = true;
-        int clienDeviceYear = 2015;
+        int clientOS = 1;
+        int clientDeviceYear = 2015;
         int targetYear = 2015;
 
-        if (clientOS && targetYear > clienDeviceYear) {
-            System.out.println("Установите облегченную версию приложения для для Android по ссылке");
-        } else if (clientOS && targetYear <= clienDeviceYear) {
+        if (clientOS == 1 && targetYear > clientDeviceYear) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientOS == 1 && targetYear <= clientDeviceYear) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (!clientOS && targetYear > clienDeviceYear) {
+        } else if (clientOS == 0 && targetYear > clientDeviceYear) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         } else {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
 
         //Ex3
+        //Не нашёл несоответсвий, многоточие в заданиях обычно означает необходимость вставить переменную
         int year = 2021;
 
         if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0) && year > 1584) {
@@ -29,11 +30,11 @@ public class Main {
         int deliveryDistance = 95;
         int deliveryTime = 0;
 
-        if (deliveryDistance < 20) {
+        if (deliveryDistance <= 20) {
             deliveryTime = 1;
-        } else if (deliveryDistance < 60) {
+        } else if (deliveryDistance <= 60) {
             deliveryTime = 2;
-        } else if (deliveryDistance < 100) {
+        } else if (deliveryDistance <= 100) {
             deliveryTime = 3;
         }
 
